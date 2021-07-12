@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gUX-IM-Hln">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qxy-1H-NtG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gUX-IM-Hln" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Tg5-sc-YOL">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CDS-9h-stJ" kind="relationship" relationship="rootViewController" id="lh7-rU-cCN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p7h-Mi-fmw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-165.21739130434784" y="146.65178571428569"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="5zM-Hw-WXz">
+            <objects>
+                <viewController id="CDS-9h-stJ" customClass="MapViewController" customModule="APTechChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CcU-s7-tNN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPZ-hX-Z85" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wOm-CK-T9i">
+                                <rect key="frame" x="87" y="386.5" width="240" height="128"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="1bJ-hi-Rw8">
+                                        <rect key="frame" x="110" y="39" width="20" height="20"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jPg-wb-r2A" customClass="TitleLabel" customModule="APTechChallenge" customModuleProvider="target">
+                                        <rect key="frame" x="82.5" y="67.5" width="75" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.58654269366197187" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="jPg-wb-r2A" firstAttribute="centerX" secondItem="1bJ-hi-Rw8" secondAttribute="centerX" id="JUq-i4-D8N"/>
+                                    <constraint firstItem="jPg-wb-r2A" firstAttribute="firstBaseline" secondItem="1bJ-hi-Rw8" secondAttribute="baseline" constant="24.5" symbolType="layoutAnchor" id="NPm-Xv-bzG"/>
+                                    <constraint firstItem="1bJ-hi-Rw8" firstAttribute="centerX" secondItem="wOm-CK-T9i" secondAttribute="centerX" id="VLN-TL-vIw"/>
+                                    <constraint firstAttribute="height" constant="128" id="lf4-H9-0bo"/>
+                                    <constraint firstAttribute="width" constant="240" id="tve-Gf-Q3C"/>
+                                    <constraint firstItem="1bJ-hi-Rw8" firstAttribute="centerY" secondItem="wOm-CK-T9i" secondAttribute="centerY" constant="-15" id="zsB-hC-VY2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="OPZ-hX-Z85" firstAttribute="top" secondItem="gv3-67-axK" secondAttribute="top" id="7tW-qp-MEj"/>
+                            <constraint firstItem="gv3-67-axK" firstAttribute="trailing" secondItem="OPZ-hX-Z85" secondAttribute="trailing" id="MW9-X9-n2P"/>
+                            <constraint firstItem="wOm-CK-T9i" firstAttribute="centerY" secondItem="gv3-67-axK" secondAttribute="centerY" id="RxX-0D-Mbx"/>
+                            <constraint firstItem="OPZ-hX-Z85" firstAttribute="leading" secondItem="gv3-67-axK" secondAttribute="leading" id="Wtx-c9-AGr"/>
+                            <constraint firstItem="wOm-CK-T9i" firstAttribute="centerX" secondItem="gv3-67-axK" secondAttribute="centerX" id="qbz-i7-Eax"/>
+                            <constraint firstAttribute="bottom" secondItem="OPZ-hX-Z85" secondAttribute="bottom" id="udS-XG-fLD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gv3-67-axK"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="yua-Kv-Ecb">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="5nZ-bv-8gU">
+                            <connections>
+                                <segue destination="GbT-8y-Do5" kind="presentation" id="rav-Mx-8Xl"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1bJ-hi-Rw8" id="YaA-Hz-TDM"/>
+                        <outlet property="loadingView" destination="wOm-CK-T9i" id="i2s-WC-kWf"/>
+                        <outlet property="mapView" destination="OPZ-hX-Z85" id="rtC-lz-dD4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65J-tJ-Y4Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702.89855072463774" y="146.65178571428569"/>
+        </scene>
+        <!--Search Controller-->
+        <scene sceneID="D5r-JG-aRj">
+            <objects>
+                <tableViewController id="GbT-8y-Do5" customClass="SearchController" customModule="APTechChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="X9m-Nn-xXn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="JTF-Dq-zFy">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JTF-Dq-zFy" id="RSP-gP-Ajn">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="GbT-8y-Do5" id="haB-Cv-Ky0"/>
+                            <outlet property="delegate" destination="GbT-8y-Do5" id="2hz-8Z-CJw"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qFJ-UJ-np1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1480" y="147"/>
+        </scene>
+    </scenes>
+</document>

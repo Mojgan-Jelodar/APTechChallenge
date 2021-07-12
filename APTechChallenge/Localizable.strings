@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  APTechChallenge
+
+  Created by m.jelodar on 12/26/19.
+  Copyright © 2019 m.jelodar. All rights reserved.
+*/
+"STATIONS_MAP_TITLE" = "Stations";
+"ALERT" = "Alert!!!";
+"OK" = "Ok";
+"THERE_IS_NO_INTERNET_CONNECTION" = "Connection was lost";
+"THERE_IS_NO_ITEM_TO_DISPLAY" = "There is no data for display";
+"TRY_AGAIN" = "Try again...";
+"ROUTING" = "Routing...";
+"CANCEL" = "Cancel";
+"GOOGLE_MAP" = "Google Map";
+"APPLE_MAP" = "Apple Map";
